@@ -34,10 +34,30 @@ An ESP32-based embedded monitoring system integrating UART communication, I2C se
 ## Testing and Results
 The integrated system was successfully tested in Wokwi simulation.
 
-- UART command responses verified
-- MPU6050 sensor data successfully read
-- SPI-driven LED ON/OFF control verified
+### 1. UART Communication Test
+- Command: `PING`
+- Result: UART communication successful.
 
+![UART PING Test](01_UART_PING_Test.png)
+
+### 2. System Status Test
+- Command: `STATUS`
+- Result: UART, I2C and SPI initialized successfully.
+
+![System STATUS Test](02_System_STATUS_Test.png)
+
+### 3. MPU6050 Sensor Test
+- Command: `SENSOR`
+- Result: Accelerometer, gyroscope and temperature readings received successfully.
+
+![MPU6050 Sensor Test](03_MPU6050_SENSOR_Test.png)
+
+### 4. SPI LED Control Test
+- Commands: `LED ON` and `LED OFF`
+- Result: SPI-driven LED control verified using the 74HC595 shift register.
+
+![LED ON](LED_ON.png)
+![LED OFF](LED_OFF.png)
 ## Project Status
 Successfully implemented and tested in Wokwi simulation.
 
